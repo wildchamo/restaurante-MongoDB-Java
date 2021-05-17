@@ -36,7 +36,7 @@ public class BaseDatos {
         //mongodb+srv://pruebaadmin:<password>@cluster0-tlwaa.mongodb.net/test?retryWrites=true&w=majority
         System.out.println("cadena " + uri.toString());
         client = new MongoClient(uri);
-        db = client.getDB("universidad");
+        db = client.getDB("restaurante");
         return db;
     }
 
