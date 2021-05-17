@@ -20,6 +20,8 @@ public class Plato extends BasicDBObject {
     private final String VALOR_REAL = "valor_real";
     private final String VALOR_COMERCIAL = "valor_comercial";
     private final String RECETA = "receta";
+    private final String INGREDIENTE = "ingrediente";
+
 
     private boolean partial;
 
@@ -27,13 +29,14 @@ public class Plato extends BasicDBObject {
         partial = false;
     }
 
-    public Plato(String nombreplato, double calorias, double valor_real, double valor_comercial, String receta) {
+    public Plato(String nombreplato, double calorias, double valor_real, double valor_comercial, String receta,Ingrediente ingrediente) {
 
         this.put(NOMBRE, nombreplato);
         this.put(CALORIAS, calorias);
         this.put(VALOR_REAL, valor_real);
         this.put(VALOR_COMERCIAL, valor_comercial);
         this.put(RECETA, receta);
+        this.put(INGREDIENTE, ingrediente);
         this.markAsPartialObject();
     }
 
@@ -48,6 +51,7 @@ public class Plato extends BasicDBObject {
         setThis.add(VALOR_REAL);
         setThis.add(VALOR_COMERCIAL);
         setThis.add(RECETA);
+        setThis.add(INGREDIENTE);
 
         partial = !set.equals(setThis);
     }
