@@ -10,5 +10,13 @@ package model;
  * @author wild.chamo
  */
 public class Ingrediente {
-    
+
+    private final String NOMBRE = "nombreIngrediente";
+    private final String CANTIDAD = "cantidadIngrediente";
+    private final String MEDIDA = "medidaIngrediente";
+    private boolean partial;
+
+    public Ingrediente() {
+        partial = false;
+    }
 }
