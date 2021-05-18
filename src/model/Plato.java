@@ -103,5 +103,5 @@ public class Plato extends BasicDBObject {
         this.put(RECETA, receta);
     }
     
-    
+        
 }
