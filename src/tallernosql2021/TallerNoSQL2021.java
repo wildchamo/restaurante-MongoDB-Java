@@ -26,7 +26,7 @@ public class TallerNoSQL2021 {
     public static void main(String[] args) {
         Chef objc = new Chef("Jose luis", 5, "joselo@uao.edu.co", "1111");
 
-        Menu objm = new Menu("comida mexicana", true, "12-2011", "30-2020", objc);
+        Menu objm = new Menu("comida mexicana", "true", "12-2011", "30-2020", objc);
 
         BaseDatos objbd = new BaseDatos();
         

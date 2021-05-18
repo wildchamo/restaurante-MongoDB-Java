@@ -27,7 +27,7 @@ public class Menu extends BasicDBObject{
         partial = false;
     }
 
-    public Menu(String nombremenu, boolean vigente, String fechainicio, String fechaFin, Chef chef) {
+    public Menu(String nombremenu, String vigente, String fechainicio, String fechaFin, Chef chef) {
         
         this.put(NOMBRE, nombremenu);
         this.put(VIGENTE, vigente);

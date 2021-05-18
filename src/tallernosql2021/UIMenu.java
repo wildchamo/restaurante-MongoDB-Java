@@ -5,6 +5,15 @@
  */
 package tallernosql2021;
 
+import model.Chef;
+import model.Menu;
+import com.mongodb.DB;
+import BD.BaseDatos;
+import com.mongodb.DBCollection;
+import java.net.UnknownHostException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author David
@@ -148,13 +157,28 @@ public class UIMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    String nomm=jTextField1.getText();
-    String vigente=cmbVigente.getSelectedItem().toString();
-    String fechai=jTextField2.getText();
-    String fechaf=jTextField3.getText();
-    
-    
-    
+        String nomm = jTextField1.getText();
+        String vigente = cmbVigente.getSelectedItem().toString();
+        String fechai = jTextField2.getText();
+        String fechaf = jTextField3.getText();
+
+        Chef objc = new Chef("Jose luis", 5, "joselo@uao.edu.co", "1111");
+
+        Menu objm = new Menu(nomm, vigente, fechai, fechaf, objc);
+
+        BaseDatos objbd = new BaseDatos();
+
+        try {
+            DB objb = objbd.createConnection();
+            if (objb != null) {
+                DBCollection collection = objb.getCollection(objm.getClass().getSimpleName());
+                collection.insert(objm);
+            }
+        } catch (UnknownHostException ex) {
+            Logger.getLogger(TallerNoSQL2021.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void cmbVigenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbVigenteActionPerformed
