@@ -13,6 +13,7 @@ import com.mongodb.DBCollection;
 import java.net.UnknownHostException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -173,6 +174,7 @@ public class UIMenu extends javax.swing.JFrame {
             if (objb != null) {
                 DBCollection collection = objb.getCollection(objm.getClass().getSimpleName());
                 collection.insert(objm);
+                JOptionPane.showMessageDialog(null,"se inserto el menú con exito!");
             }
         } catch (UnknownHostException ex) {
             Logger.getLogger(TallerNoSQL2021.class.getName()).log(Level.SEVERE, null, ex);
