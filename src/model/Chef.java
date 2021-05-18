@@ -25,7 +25,7 @@ public class Chef extends BasicDBObject {
         partial = false;
     }
 
-    public Chef(String nombrechef, int experiencia, String correo, String telefono) {
+    public Chef(String nombrechef, String experiencia, String correo, String telefono) {
         //clave y valor
         this.put(NOMBRE, nombrechef);
         this.put(EXPERIENCIA, experiencia);
