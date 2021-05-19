@@ -5,9 +5,11 @@
         <group>
             <file>file:/C:/Users/ADMIN/Documents/TallerNoSQL2021/src/model/Ingrediente.java</file>
             <file>file:/C:/Users/ADMIN/Documents/TallerNoSQL2021/src/model/Plato.java</file>
+            <file>file:/C:/Users/ADMIN/Documents/TallerNoSQL2021/src/tallernosql2021/InsercionPlatoI.java</file>
             <file>file:/C:/Users/ADMIN/Documents/TallerNoSQL2021/src/model/Chef.java</file>
             <file>file:/C:/Users/ADMIN/Documents/TallerNoSQL2021/src/BD/BaseDatos.java</file>
             <file>file:/C:/Users/ADMIN/Documents/TallerNoSQL2021/src/tallernosql2021/UIMenu.java</file>
+            <file>file:/C:/Users/ADMIN/Documents/TallerNoSQL2021/src/tallernosql2021/PlatoIngrediente.java</file>
             <file>file:/C:/Users/ADMIN/Documents/TallerNoSQL2021/src/model/Menu.java</file>
             <file>file:/C:/Users/ADMIN/Documents/TallerNoSQL2021/src/tallernosql2021/TallerNoSQL2021.java</file>
         </group>
