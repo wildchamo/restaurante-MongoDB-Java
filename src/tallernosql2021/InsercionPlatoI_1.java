@@ -337,9 +337,9 @@ public class InsercionPlatoI_1 extends javax.swing.JFrame {
 
         Ingrediente obj1 = new Ingrediente(nomI1, cantidadT1D, medidaI1);
 
-        LinkedList<Ingrediente> Ingredientes = new LinkedList<Ingrediente>();
-        Ingredientes.add(obj1);
-        System.out.println(Ingredientes);
+        LinkedList<Ingrediente> ingredientes = new LinkedList<Ingrediente>();
+        ingredientes.add(obj1);
+        System.out.println(ingredientes);
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
