@@ -52,7 +52,7 @@ public class Plato extends BasicDBObject {
         setThis.add(VALOR_REAL);
         setThis.add(VALOR_COMERCIAL);
         setThis.add(RECETA);
-        setThis.add(INGREDIENTE);
+        setThis.add(INGREDIENTES);
 
         partial = !set.equals(setThis);
     }

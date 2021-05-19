@@ -13,6 +13,8 @@ import com.mongodb.DBCollection;
 import java.net.UnknownHostException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.LinkedList;
+
 
 /**
  *
@@ -26,7 +28,7 @@ public class PlatoIngrediente {
     public static void main(String[] args) {
         Ingrediente obji = new Ingrediente("nombregenerico","cantidad generica","miligramos");
 
-        Plato objp = new Plato("nombreplato", 15, 300, 400,"de la abuela", obji);
+        Plato objp = new Plato("nombreplato", 15, 300, 400,"de la abuela", linkedList);
 
         BaseDatos objbd = new BaseDatos();
         
