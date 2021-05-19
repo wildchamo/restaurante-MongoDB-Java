@@ -5,6 +5,16 @@
  */
 package tallernosql2021;
 
+import BD.BaseDatos;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import java.net.UnknownHostException;
+import java.util.LinkedList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import model.Ingrediente;
+import model.Plato;
+
 /**
  *
  * @author wild.chamo
@@ -402,7 +412,29 @@ public class InsercionPlatoI extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField8ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        
+        
+        
+        Ingrediente obj1 = new Ingrediente("nombregenerico","cantidad generica","miligramos");
+        Ingrediente obj2 = new Ingrediente("nombregenerico","cantidad generica","miligramos");
+        Ingrediente obj3 = new Ingrediente("nombregenerico","cantidad generica","miligramos");
+        LinkedList<Ingrediente> ingredientes = new LinkedList<Ingrediente>();
+        ingredientes.add(obji);
+        ingredientes.add(obji);
+        ingredientes.add(obji);
+        Plato objp = new Plato("nombreplato", 15, 300, 400,"de la abuela",ingredientes );
+
+        BaseDatos objbd = new BaseDatos();
+        
+        try {
+            DB objb= objbd.createConnection();
+            if (objb != null) {
+                DBCollection collection= objb.getCollection(objp.getClass().getSimpleName());
+                collection.insert(objp);
+            }
+        } catch (UnknownHostException ex) {
+            Logger.getLogger(TallerNoSQL2021.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
