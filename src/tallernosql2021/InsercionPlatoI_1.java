@@ -288,7 +288,8 @@ public class InsercionPlatoI_1 extends javax.swing.JFrame {
     private void medida1textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medida1textActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_medida1textActionPerformed
-
+    LinkedList<Ingrediente> ingredientes = new LinkedList<Ingrediente>();
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         String nomP = nombretext.getText();
@@ -337,7 +338,7 @@ public class InsercionPlatoI_1 extends javax.swing.JFrame {
 
         Ingrediente obj1 = new Ingrediente(nomI1, cantidadT1D, medidaI1);
 
-        LinkedList<Ingrediente> ingredientes = new LinkedList<Ingrediente>();
+        
         ingredientes.add(obj1);
         System.out.println(ingredientes);
         
@@ -360,20 +361,20 @@ public class InsercionPlatoI_1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InsercionPlatoI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InsercionPlatoI_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InsercionPlatoI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InsercionPlatoI_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InsercionPlatoI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InsercionPlatoI_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InsercionPlatoI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InsercionPlatoI_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InsercionPlatoI().setVisible(true);
+                new InsercionPlatoI_1().setVisible(true);
             }
         });
     }
