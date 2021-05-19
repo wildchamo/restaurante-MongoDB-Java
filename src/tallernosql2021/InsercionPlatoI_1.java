@@ -12,6 +12,7 @@ import java.net.UnknownHostException;
 import java.util.LinkedList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import model.Ingrediente;
 import model.Plato;
 
@@ -334,6 +335,7 @@ public class InsercionPlatoI_1 extends javax.swing.JFrame {
         nombreI1.setText(null);
         cantidadI1text.setText(null);
         medida1text.setText(null);
+        JOptionPane.showMessageDialog(null,"se inserto el ingrediente con exito!");
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
