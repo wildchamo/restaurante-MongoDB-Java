@@ -23,7 +23,7 @@ public class Ingrediente extends BasicDBObject {
         partial = false;
     }
 
-    public Ingrediente(String nombreIngrediente, String cantidadIngrediente,  String medidaIngrediente) {
+    public Ingrediente(String nombreIngrediente, Double cantidadIngrediente,  String medidaIngrediente) {
         //clave y valor
         this.put(NOMBRE, nombreIngrediente);
         this.put(CANTIDAD, cantidadIngrediente);

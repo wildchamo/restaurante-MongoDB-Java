@@ -49,8 +49,8 @@ public class InsercionPlatoI extends javax.swing.JFrame {
         valorComercialtext = new javax.swing.JTextField();
         recetaText = new javax.swing.JTextField();
         nombreI1 = new javax.swing.JTextField();
-        caloriasI1 = new javax.swing.JTextField();
-        valorRealI1 = new javax.swing.JTextField();
+        cantidadI1text = new javax.swing.JTextField();
+        medida1text = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -60,15 +60,15 @@ public class InsercionPlatoI extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         nombreI2 = new javax.swing.JTextField();
-        caloriasI2 = new javax.swing.JTextField();
-        valorRealI2 = new javax.swing.JTextField();
+        cantidadI2text = new javax.swing.JTextField();
+        medida2text = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         nombreI3 = new javax.swing.JTextField();
-        caloriasI3 = new javax.swing.JTextField();
-        valorRealI3 = new javax.swing.JTextField();
+        cantidadI3text = new javax.swing.JTextField();
+        medida3text = new javax.swing.JTextField();
         jLabel26 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -122,15 +122,15 @@ public class InsercionPlatoI extends javax.swing.JFrame {
             }
         });
 
-        caloriasI1.addActionListener(new java.awt.event.ActionListener() {
+        cantidadI1text.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                caloriasI1ActionPerformed(evt);
+                cantidadI1textActionPerformed(evt);
             }
         });
 
-        valorRealI1.addActionListener(new java.awt.event.ActionListener() {
+        medida1text.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorRealI1ActionPerformed(evt);
+                medida1textActionPerformed(evt);
             }
         });
 
@@ -138,9 +138,9 @@ public class InsercionPlatoI extends javax.swing.JFrame {
 
         jLabel10.setText("Nombre");
 
-        jLabel11.setText("Calorias");
+        jLabel11.setText("Cantidad");
 
-        jLabel12.setText("Valor real");
+        jLabel12.setText("medida");
 
         jButton1.setText("Ingresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -151,9 +151,9 @@ public class InsercionPlatoI extends javax.swing.JFrame {
 
         jLabel19.setText("Nombre");
 
-        jLabel20.setText("Calorias");
+        jLabel20.setText("Cantidad");
 
-        jLabel21.setText("Valor real");
+        jLabel21.setText("medida");
 
         nombreI2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,15 +161,15 @@ public class InsercionPlatoI extends javax.swing.JFrame {
             }
         });
 
-        caloriasI2.addActionListener(new java.awt.event.ActionListener() {
+        cantidadI2text.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                caloriasI2ActionPerformed(evt);
+                cantidadI2textActionPerformed(evt);
             }
         });
 
-        valorRealI2.addActionListener(new java.awt.event.ActionListener() {
+        medida2text.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorRealI2ActionPerformed(evt);
+                medida2textActionPerformed(evt);
             }
         });
 
@@ -177,9 +177,9 @@ public class InsercionPlatoI extends javax.swing.JFrame {
 
         jLabel23.setText("Nombre");
 
-        jLabel24.setText("Calorias");
+        jLabel24.setText("Cantidad");
 
-        jLabel25.setText("Valor real");
+        jLabel25.setText("medida");
 
         nombreI3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,15 +187,15 @@ public class InsercionPlatoI extends javax.swing.JFrame {
             }
         });
 
-        caloriasI3.addActionListener(new java.awt.event.ActionListener() {
+        cantidadI3text.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                caloriasI3ActionPerformed(evt);
+                cantidadI3textActionPerformed(evt);
             }
         });
 
-        valorRealI3.addActionListener(new java.awt.event.ActionListener() {
+        medida3text.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorRealI3ActionPerformed(evt);
+                medida3textActionPerformed(evt);
             }
         });
 
@@ -219,18 +219,17 @@ public class InsercionPlatoI extends javax.swing.JFrame {
                         .addGap(101, 101, 101)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGap(5, 5, 5)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel25)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel24)
-                                        .addGap(7, 7, 7))
-                                    .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel23)
-                                        .addGap(8, 8, 8)))
+                                        .addGap(8, 8, 8))
+                                    .addComponent(jLabel24))
                                 .addGap(10, 10, 10)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(valorRealI3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(caloriasI3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(medida3text, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cantidadI3text, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(nombreI3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jLabel26)))
                     .addGroup(layout.createSequentialGroup()
@@ -255,39 +254,39 @@ public class InsercionPlatoI extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(jLabel12)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel11)
-                                                .addGap(7, 7, 7)))
-                                        .addGap(10, 10, 10))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addComponent(jLabel10)
-                                        .addGap(18, 18, 18)))
+                                        .addGap(18, 18, 18))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(5, 5, 5)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel11)
+                                            .addComponent(jLabel12))
+                                        .addGap(10, 10, 10)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(valorRealI1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(caloriasI1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(medida1text, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cantidadI1text, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(nombreI1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jLabel7))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel22)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel20)
-                                .addGap(7, 7, 7))
-                            .addGroup(layout.createSequentialGroup()
+                                .addGap(5, 5, 5)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel21)
+                                    .addComponent(jLabel20))
+                                .addGap(10, 10, 10))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLabel19)
-                                .addGap(8, 8, 8)))
-                        .addGap(10, 10, 10)
+                                .addGap(18, 18, 18)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(valorRealI2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(caloriasI2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nombreI2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(18, Short.MAX_VALUE))
+                            .addComponent(medida2text, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cantidadI2text, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nombreI2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -311,39 +310,32 @@ public class InsercionPlatoI extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(nombreI1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel19)
+                            .addComponent(nombreI2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cantidadI1text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(medida1text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel22)
+                        .addGap(26, 26, 26)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(nombreI1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel10))
+                                    .addComponent(cantidadI2text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel20))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(caloriasI1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(valorRealI1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(medida2text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(29, 29, 29)
-                                .addComponent(jLabel11)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel12))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel22)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(nombreI2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(caloriasI2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(valorRealI2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(jLabel19)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel20)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel21)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -354,15 +346,15 @@ public class InsercionPlatoI extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(nombreI3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(caloriasI3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(cantidadI3text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel24))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(valorRealI3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(medida3text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(9, 9, 9)
                                 .addComponent(jLabel23)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel24)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(26, 26, 26)
                                 .addComponent(jLabel25)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                         .addComponent(jButton1)
@@ -405,13 +397,13 @@ public class InsercionPlatoI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nombreI1ActionPerformed
 
-    private void caloriasI1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caloriasI1ActionPerformed
+    private void cantidadI1textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cantidadI1textActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_caloriasI1ActionPerformed
+    }//GEN-LAST:event_cantidadI1textActionPerformed
 
-    private void valorRealI1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorRealI1ActionPerformed
+    private void medida1textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medida1textActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_valorRealI1ActionPerformed
+    }//GEN-LAST:event_medida1textActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
@@ -425,8 +417,19 @@ public class InsercionPlatoI extends javax.swing.JFrame {
         double valorCD=Double.parseDouble(valorC);
         String receta= recetaText.getText();
         
-        Ingrediente obj1 = new Ingrediente("nombregenerico","cantidad generica","miligramos");
-        Ingrediente obj2 = new Ingrediente("nombregenerico","cantidad generica","miligramos");
+        
+        String nomI1=nombreI1.getText();
+        String cantidadI1= cantidadI1text.getText();
+        double cantidadT1D=Double.parseDouble(cantidadI1);
+        String medidaI1= medida1text.getText();
+       
+        String nomI2=nombreI2.getText();
+        String cantidadI2= cantidadI2text.getText();
+        double cantidadT2D=Double.parseDouble(cantidadI2);
+        String medida= medida1text.getText();
+        
+        Ingrediente obj1 = new Ingrediente(nomI1,cantidadT1D,medida);
+        Ingrediente obj2 = new Ingrediente(nomI2,"cantidad generica","miligramos");
         Ingrediente obj3 = new Ingrediente("nombregenerico","cantidad generica","miligramos");
         LinkedList<Ingrediente> ingredientes = new LinkedList<Ingrediente>();
         ingredientes.add(obj1);
@@ -456,25 +459,25 @@ public class InsercionPlatoI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nombreI2ActionPerformed
 
-    private void caloriasI2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caloriasI2ActionPerformed
+    private void cantidadI2textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cantidadI2textActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_caloriasI2ActionPerformed
+    }//GEN-LAST:event_cantidadI2textActionPerformed
 
-    private void valorRealI2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorRealI2ActionPerformed
+    private void medida2textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medida2textActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_valorRealI2ActionPerformed
+    }//GEN-LAST:event_medida2textActionPerformed
 
     private void nombreI3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreI3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nombreI3ActionPerformed
 
-    private void caloriasI3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caloriasI3ActionPerformed
+    private void cantidadI3textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cantidadI3textActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_caloriasI3ActionPerformed
+    }//GEN-LAST:event_cantidadI3textActionPerformed
 
-    private void valorRealI3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorRealI3ActionPerformed
+    private void medida3textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medida3textActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_valorRealI3ActionPerformed
+    }//GEN-LAST:event_medida3textActionPerformed
 
     /**
      * @param args the command line arguments
@@ -512,10 +515,10 @@ public class InsercionPlatoI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField caloriasI1;
-    private javax.swing.JTextField caloriasI2;
-    private javax.swing.JTextField caloriasI3;
     private javax.swing.JTextField caloriastext;
+    private javax.swing.JTextField cantidadI1text;
+    private javax.swing.JTextField cantidadI2text;
+    private javax.swing.JTextField cantidadI3text;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -535,15 +538,15 @@ public class InsercionPlatoI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JTextField medida1text;
+    private javax.swing.JTextField medida2text;
+    private javax.swing.JTextField medida3text;
     private javax.swing.JTextField nombreI1;
     private javax.swing.JTextField nombreI2;
     private javax.swing.JTextField nombreI3;
     private javax.swing.JTextField nombretext;
     private javax.swing.JTextField recetaText;
     private javax.swing.JTextField valorComercialtext;
-    private javax.swing.JTextField valorRealI1;
-    private javax.swing.JTextField valorRealI2;
-    private javax.swing.JTextField valorRealI3;
     private javax.swing.JTextField valorRealtext;
     // End of variables declaration//GEN-END:variables
 }
