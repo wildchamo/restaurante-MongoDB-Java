@@ -267,12 +267,8 @@ public class UIMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
    
-    
-    
-    
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
-         try{
+   private void formWindowOpended(java.awt.event.WindowEvent evt) {
+             try{
             DB objB=objBd.createConnection();
         
             if(objB == null){
@@ -282,18 +278,19 @@ public class UIMenu extends javax.swing.JFrame {
                 
                 for(Plato plato : listP){
                     model.addRow(new Object[]{plato.getNombreP(),false});
-//                    PlatosTable.setModel(model);
+                    PlatosTable.setModel(model);
                 }
                         
             }
         }catch(UnknownHostException ex){
-          //  Logger.getLogger(UIMenu.class.getName().log(Level.SEVERE,null,ex));
+     //       Logger.getLogger(UIMenu.class.getName()).log(Level.SEVERE, null, ex));
+            
         }
-        
-        
-        
-        
-        
+    }
+    
+    
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+              
         //creo la linkedList de los platos
         LinkedList<String> codigosPlatos= new LinkedList<String>();
         
@@ -321,7 +318,7 @@ public class UIMenu extends javax.swing.JFrame {
 
         Chef objc = new Chef(nomc, experiencia, correo, telefono);
 
-       // Menu objm = new Menu(nomm, vigente, fechai, fechaf, );
+        Menu objm = new Menu(nomm, vigente, fechai, fechaf,objc,codigosPlatos );
 
         BaseDatos objbd = new BaseDatos();
 
