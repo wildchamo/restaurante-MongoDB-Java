@@ -7,11 +7,12 @@ package model;
 
 import com.mongodb.BasicDBObject;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Set;
 
 /**
  *
- * @author dacastro
+ * @author wildChamo
  */
 public class Menu extends BasicDBObject{
     
@@ -20,6 +21,7 @@ public class Menu extends BasicDBObject{
     private final String FECHAINICIO = "fechainicio";
     private final String FECHAFIN   = "fechafin";
     private final String CHEF   = "chef";
+    private final String PLATOS   = "platos";
     
     private boolean partial;
 
@@ -27,13 +29,14 @@ public class Menu extends BasicDBObject{
         partial = false;
     }
 
-    public Menu(String nombremenu, String vigente, String fechainicio, String fechaFin, Chef chef) {
+    public Menu(String nombremenu, String vigente, String fechainicio, String fechaFin, Chef chef, LinkedList<String> platos) {
         
         this.put(NOMBRE, nombremenu);
         this.put(VIGENTE, vigente);
         this.put(FECHAINICIO, fechainicio);
         this.put(FECHAFIN, fechaFin);
         this.put(CHEF, chef);
+        this.put(PLATOS,platos);
         this.markAsPartialObject();
     }
 

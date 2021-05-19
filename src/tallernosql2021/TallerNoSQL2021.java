@@ -26,15 +26,15 @@ public class TallerNoSQL2021 {
     public static void main(String[] args) {
         Chef objc = new Chef("Jose luis", "si", "joselo@uao.edu.co", "1111");
 
-        Menu objm = new Menu("comida mexicana", "true", "12-2011", "30-2020", objc);
+     //   Menu objm = new Menu("comida mexicana", "true", "12-2011", "30-2020", objc,);
 
         BaseDatos objbd = new BaseDatos();
         
         try {
             DB objb= objbd.createConnection();
             if (objb != null) {
-                DBCollection collection= objb.getCollection(objm.getClass().getSimpleName());
-                collection.insert(objm);
+        //        DBCollection collection= objb.getCollection(objm.getClass().getSimpleName());
+         //       collection.insert(objm);
             }
         } catch (UnknownHostException ex) {
             Logger.getLogger(TallerNoSQL2021.class.getName()).log(Level.SEVERE, null, ex);
