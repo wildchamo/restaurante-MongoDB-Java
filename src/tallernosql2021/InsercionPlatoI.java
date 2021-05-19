@@ -406,53 +406,54 @@ public class InsercionPlatoI extends javax.swing.JFrame {
     }//GEN-LAST:event_medida1textActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        
+
         String nomP = nombretext.getText();
         String caloriasP = caloriastext.getText();
-        double caloriasD=Double.parseDouble(caloriasP);
+        double caloriasD = Double.parseDouble(caloriasP);
         String valorR = valorRealtext.getText();
-        double valorRD=Double.parseDouble(valorR);
+        double valorRD = Double.parseDouble(valorR);
         String valorC = valorComercialtext.getText();
-        double valorCD=Double.parseDouble(valorC);
-        String receta= recetaText.getText();
-        
-        
-        String nomI1=nombreI1.getText();
-        String cantidadI1= cantidadI1text.getText();
-        double cantidadT1D=Double.parseDouble(cantidadI1);
-        String medidaI1= medida1text.getText();
-       
-        String nomI2=nombreI2.getText();
-        String cantidadI2= cantidadI2text.getText();
-        double cantidadT2D=Double.parseDouble(cantidadI2);
-        String medida= medida1text.getText();
-        
-        Ingrediente obj1 = new Ingrediente(nomI1,cantidadT1D,medida);
-        Ingrediente obj2 = new Ingrediente(nomI2,"cantidad generica","miligramos");
-        Ingrediente obj3 = new Ingrediente("nombregenerico","cantidad generica","miligramos");
+        double valorCD = Double.parseDouble(valorC);
+        String receta = recetaText.getText();
+
+        String nomI1 = nombreI1.getText();
+        String cantidadI1 = cantidadI1text.getText();
+        double cantidadT1D = Double.parseDouble(cantidadI1);
+        String medidaI1 = medida1text.getText();
+
+        String nomI2 = nombreI2.getText();
+        String cantidadI2 = cantidadI2text.getText();
+        double cantidadT2D = Double.parseDouble(cantidadI2);
+        String medidaI2 = medida2text.getText();
+
+        String nomI3 = nombreI3.getText();
+        String cantidadI3 = cantidadI3text.getText();
+        double cantidadT3D = Double.parseDouble(cantidadI3);
+        String medidaI3 = medida3text.getText();
+
+        Ingrediente obj1 = new Ingrediente(nomI1, cantidadT1D, medidaI1);
+        Ingrediente obj2 = new Ingrediente(nomI2, cantidadT2D, medidaI2);
+        Ingrediente obj3 = new Ingrediente(nomI3, cantidadT3D, medidaI3);
         LinkedList<Ingrediente> ingredientes = new LinkedList<Ingrediente>();
         ingredientes.add(obj1);
         ingredientes.add(obj2);
         ingredientes.add(obj3);
-        
-        Plato objp = new Plato(nomP, caloriasD, valorRD, valorCD,receta,ingredientes );
+
+        Plato objp = new Plato(nomP, caloriasD, valorRD, valorCD, receta, ingredientes);
 
         BaseDatos objbd = new BaseDatos();
-        
+
         try {
-            DB objb= objbd.createConnection();
+            DB objb = objbd.createConnection();
             if (objb != null) {
-                DBCollection collection= objb.getCollection(objp.getClass().getSimpleName());
+                DBCollection collection = objb.getCollection(objp.getClass().getSimpleName());
                 collection.insert(objp);
             }
         } catch (UnknownHostException ex) {
             Logger.getLogger(TallerNoSQL2021.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-        
-        
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void nombreI2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreI2ActionPerformed

@@ -26,7 +26,7 @@ public class PlatoIngrediente {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Ingrediente obji = new Ingrediente("nombregenerico","cantidad generica","miligramos");
+        Ingrediente obji = new Ingrediente("nombregenerico",1.1,"miligramos");
         LinkedList<Ingrediente> ingredientes = new LinkedList<Ingrediente>();
         ingredientes.add(obji);
         ingredientes.add(obji);
