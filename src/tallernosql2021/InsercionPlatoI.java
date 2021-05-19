@@ -418,8 +418,11 @@ public class InsercionPlatoI extends javax.swing.JFrame {
         
         String nomP = nombretext.getText();
         String caloriasP = caloriastext.getText();
+        double caloriasD=Double.parseDouble(caloriasP);
         String valorR = valorRealtext.getText();
+        double valorRD=Double.parseDouble(valorR);
         String valorC = valorComercialtext.getText();
+        double valorCD=Double.parseDouble(valorC);
         String receta= recetaText.getText();
         
         Ingrediente obj1 = new Ingrediente("nombregenerico","cantidad generica","miligramos");
@@ -430,7 +433,7 @@ public class InsercionPlatoI extends javax.swing.JFrame {
         ingredientes.add(obj2);
         ingredientes.add(obj3);
         
-        Plato objp = new Plato(nomP, caloriasP, valorR, valorC,receta,ingredientes );
+        Plato objp = new Plato(nomP, caloriasD, valorRD, valorCD,receta,ingredientes );
 
         BaseDatos objbd = new BaseDatos();
         
