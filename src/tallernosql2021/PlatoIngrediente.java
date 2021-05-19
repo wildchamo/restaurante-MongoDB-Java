@@ -41,6 +41,8 @@ public class PlatoIngrediente {
             if (objb != null) {
 //                DBCollection collection= objb.getCollection(objp.getClass().getSimpleName());
 //                collection.insert(objp);
+//jcombobox 
+//agregar el get del _id
 
                 listaP = (LinkedList<Plato>)objbd.findAll(objpp.getClass());
                 
