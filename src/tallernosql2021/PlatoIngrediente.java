@@ -27,8 +27,11 @@ public class PlatoIngrediente {
      */
     public static void main(String[] args) {
         Ingrediente obji = new Ingrediente("nombregenerico","cantidad generica","miligramos");
-
-        Plato objp = new Plato("nombreplato", 15, 300, 400,"de la abuela", linkedList);
+        LinkedList<Ingrediente> ingredientes = new LinkedList<Ingrediente>();
+        ingredientes.add(obji);
+        ingredientes.add(obji);
+        ingredientes.add(obji);
+        Plato objp = new Plato("nombreplato", 15, 300, 400,"de la abuela",ingredientes );
 
         BaseDatos objbd = new BaseDatos();
         

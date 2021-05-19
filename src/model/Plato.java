@@ -30,7 +30,7 @@ public class Plato extends BasicDBObject {
         partial = false;
     }
 
-    public Plato(String nombreplato, double calorias, double valor_real, double valor_comercial, String receta,LinkedList<String> ingredientes) {
+    public Plato(String nombreplato, double calorias, double valor_real, double valor_comercial, String receta,LinkedList<Ingrediente> ingredientes) {
 
         this.put(NOMBRE, nombreplato);
         this.put(CALORIAS, calorias);
