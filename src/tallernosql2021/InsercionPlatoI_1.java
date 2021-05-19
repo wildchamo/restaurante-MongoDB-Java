@@ -290,7 +290,7 @@ public class InsercionPlatoI_1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_medida1textActionPerformed
     LinkedList<Ingrediente> ingredientes = new LinkedList<Ingrediente>();
-    
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         String nomP = nombretext.getText();
@@ -312,6 +312,10 @@ public class InsercionPlatoI_1 extends javax.swing.JFrame {
                 DBCollection collection = objb.getCollection(objp.getClass().getSimpleName());
                 collection.insert(objp);
                 ingredientes.clear();
+                nombretext.setText(null);
+                valorRealtext.setText(null);
+                valorComercialtext.setText(null);
+                recetaText.setText(null);
             }
         } catch (UnknownHostException ex) {
             Logger.getLogger(TallerNoSQL2021.class.getName()).log(Level.SEVERE, null, ex);
@@ -328,15 +332,14 @@ public class InsercionPlatoI_1 extends javax.swing.JFrame {
 
         Ingrediente obj1 = new Ingrediente(nomI1, cantidadT1D, medidaI1);
 
-        
         ingredientes.add(obj1);
         System.out.println(ingredientes);
-        
+
         nombreI1.setText(null);
         cantidadI1text.setText(null);
         medida1text.setText(null);
-        JOptionPane.showMessageDialog(null,"se inserto el ingrediente con exito!");
-        
+        JOptionPane.showMessageDialog(null, "se inserto el ingrediente con exito!");
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
