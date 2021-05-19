@@ -301,18 +301,6 @@ public class InsercionPlatoI_1 extends javax.swing.JFrame {
         double valorCD = Double.parseDouble(valorC);
         String receta = recetaText.getText();
 
-        String nomI1 = nombreI1.getText();
-        String cantidadI1 = cantidadI1text.getText();
-        double cantidadT1D = Double.parseDouble(cantidadI1);
-        String medidaI1 = medida1text.getText();
-
-
-
-        Ingrediente obj1 = new Ingrediente(nomI1, cantidadT1D, medidaI1);
-        LinkedList<Ingrediente> ingredientes = new LinkedList<Ingrediente>();
-        ingredientes.add(obj1);
-
-
         Plato objp = new Plato(nomP, caloriasD, valorRD, valorCD, receta, ingredientes);
 
         BaseDatos objbd = new BaseDatos();
@@ -322,6 +310,7 @@ public class InsercionPlatoI_1 extends javax.swing.JFrame {
             if (objb != null) {
                 DBCollection collection = objb.getCollection(objp.getClass().getSimpleName());
                 collection.insert(objp);
+                ingredientes.clear();
             }
         } catch (UnknownHostException ex) {
             Logger.getLogger(TallerNoSQL2021.class.getName()).log(Level.SEVERE, null, ex);
@@ -341,6 +330,10 @@ public class InsercionPlatoI_1 extends javax.swing.JFrame {
         
         ingredientes.add(obj1);
         System.out.println(ingredientes);
+        
+        nombreI1.setText(null);
+        cantidadI1text.setText(null);
+        medida1text.setText(null);
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
