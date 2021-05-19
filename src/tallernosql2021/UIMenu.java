@@ -300,7 +300,7 @@ public class UIMenu extends javax.swing.JFrame {
 
         Chef objc = new Chef(nomc, experiencia, correo, telefono);
 
-        Menu objm = new Menu(nomm, vigente, fechai, fechaf,objc,codigosPlatos );
+        Menu objm = new Menu(nomm, vigente, fechai, fechaf,objc,codigosPlatos);
 
         BaseDatos objbd = new BaseDatos();
 
