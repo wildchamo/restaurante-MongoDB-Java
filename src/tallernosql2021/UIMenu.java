@@ -302,9 +302,15 @@ public class UIMenu extends javax.swing.JFrame {
                 if (objb != null) {
                     DBCollection collection = objb.getCollection(objm.getClass().getSimpleName());
                     collection.insert(objm);
-
-                    
                     JOptionPane.showMessageDialog(null, "se inserto el menú con exito!");
+                    codigosPlatos.clear();
+                    jTextField1.setText(null);
+                    jTextField2.setText(null);
+                    jTextField3.setText(null);
+                    jTextField4.setText(null);
+                    jTextField6.setText(null);
+                    jTextField6.setText(null);
+                            
                 }
             } catch (UnknownHostException ex) {
                 Logger.getLogger(TallerNoSQL2021.class.getName()).log(Level.SEVERE, null, ex);
