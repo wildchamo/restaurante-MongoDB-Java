@@ -23,8 +23,10 @@ import model.Plato;
  * @author David
  */
 public class UIMenu extends javax.swing.JFrame {
+
     LinkedList<Plato> listaP;
-    BaseDatos objBd=new BaseDatos();
+    BaseDatos objBd = new BaseDatos();
+
     /**
      * Creates new form UIMenu
      */
@@ -137,7 +139,7 @@ public class UIMenu extends javax.swing.JFrame {
 
         PlatosTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null}
+
             },
             new String [] {
                 "Nombre Plato", "Agregar"
@@ -147,7 +149,7 @@ public class UIMenu extends javax.swing.JFrame {
                 java.lang.String.class, java.lang.Boolean.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false
+                false, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -171,51 +173,48 @@ public class UIMenu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(69, 69, 69)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jButton1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel6)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel5)
+                                .addComponent(jLabel4))
+                            .addGap(50, 50, 50)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                                .addComponent(jTextField3)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(experienciacmb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel3)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cmbVigente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel2)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel5)
-                                        .addComponent(jLabel4))
-                                    .addGap(50, 50, 50)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jTextField3)
-                                        .addComponent(jTextField2)))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel7)
-                                        .addComponent(jLabel10)
-                                        .addComponent(jLabel8)
-                                        .addComponent(jLabel9))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(experienciacmb, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(10, 10, 10)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jTextField7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(87, 87, 87))))
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9))
+                        .addGap(36, 36, 36)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                            .addComponent(jTextField7)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addGap(39, 39, 39)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cmbVigente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55))
             .addGroup(layout.createSequentialGroup()
-                .addGap(229, 229, 229)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(229, 229, 229)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(251, 251, 251)
+                        .addComponent(jButton1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -248,76 +247,71 @@ public class UIMenu extends javax.swing.JFrame {
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(experienciacmb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8))
-                        .addGap(14, 14, 14)
+                            .addComponent(jLabel8)
+                            .addComponent(experienciacmb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel9)
                             .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(4, 4, 4)
+                        .addGap(13, 13, 13)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel10)
                             .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
+                .addGap(27, 27, 27)
                 .addComponent(jButton1)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-   
 
-    
-    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         //creo la linkedList de los platos
-        LinkedList<String> codigosPlatos= new LinkedList<String>();
-        
-        for(int i=0; i< PlatosTable.getRowCount();i++){
-            if((Boolean)PlatosTable.getValueAt(i,1)){
-            codigosPlatos.add(listaP.get(i).getString("_id"));
-        }
-        }
-        
-        if(codigosPlatos.isEmpty()){
-             JOptionPane.showMessageDialog(null,"seleccione los platos. Sin platos no se puede crear un menú");
-        }else{
-                 
-        String nomm = jTextField1.getText();
-        String vigente = cmbVigente.getSelectedItem().toString();
-        String fechai = jTextField2.getText();
-        String fechaf = jTextField3.getText();
-        
-        
-        String nomc = jTextField4.getText();
-        String experiencia = experienciacmb.getSelectedItem().toString();
-        String correo = jTextField6.getText();
-        String telefono = jTextField7.getText();
-        
+        LinkedList<String> codigosPlatos = new LinkedList<String>();
 
-        Chef objc = new Chef(nomc, experiencia, correo, telefono);
-
-        Menu objm = new Menu(nomm, vigente, fechai, fechaf,objc,codigosPlatos);
-
-        BaseDatos objbd = new BaseDatos();
-
-        try {
-            DB objb = objbd.createConnection();
-            if (objb != null) {
-                DBCollection collection = objb.getCollection(objm.getClass().getSimpleName());
-                collection.insert(objm);
-                JOptionPane.showMessageDialog(null,"se inserto el menú con exito!");
+        for (int i = 0; i < PlatosTable.getRowCount(); i++) {
+            if ((Boolean) PlatosTable.getValueAt(i, 1)) {
+                codigosPlatos.add(listaP.get(i).getString("_id"));
             }
-        } catch (UnknownHostException ex) {
-            Logger.getLogger(TallerNoSQL2021.class.getName()).log(Level.SEVERE, null, ex);
         }
- 
+
+        if (codigosPlatos.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "seleccione los platos. Sin platos no se puede crear un menú");
+        } else {
+
+            String nomm = jTextField1.getText();
+            String vigente = cmbVigente.getSelectedItem().toString();
+            String fechai = jTextField2.getText();
+            String fechaf = jTextField3.getText();
+//chef
+            String nomc = jTextField4.getText();
+            String experiencia = experienciacmb.getSelectedItem().toString();
+            String correo = jTextField6.getText();
+            String telefono = jTextField7.getText();
+
+            BaseDatos objBd = new BaseDatos();
+            Chef objc = new Chef(nomc, experiencia, correo, telefono);
+
+            Menu objm = new Menu(nomm, vigente, fechai, fechaf, objc, codigosPlatos);
+
+            try {
+                DB objb = objBd.createConnection();
+                if (objb != null) {
+                    DBCollection collection = objb.getCollection(objm.getClass().getSimpleName());
+                    collection.insert(objm);
+
+                    
+                    JOptionPane.showMessageDialog(null, "se inserto el menú con exito!");
+                }
+            } catch (UnknownHostException ex) {
+                Logger.getLogger(TallerNoSQL2021.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
         }
-        
-  
+
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -334,25 +328,25 @@ public class UIMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-            
-        try{
-            DB objB=objBd.createConnection();
-        
-            if(objB != null){
-                Plato tempP=new Plato();
-                listaP=(LinkedList<Plato>)objBd.findAll(tempP.getClass());      
-                       
-                DefaultTableModel model = (DefaultTableModel)PlatosTable.getModel();
-                
-                for(Plato plato : listaP){
-                    model.addRow(new Object[]{plato.getNombreP(),false});
+
+        try {
+            DB objB = objBd.createConnection();
+
+            if (objB != null) {
+                Plato tempP = new Plato();
+                listaP = (LinkedList<Plato>) objBd.findAll(tempP.getClass());
+
+                DefaultTableModel model = (DefaultTableModel) PlatosTable.getModel();
+
+                for (Plato plato : listaP) {
+                    model.addRow(new Object[]{plato.getNombreP(), false});
                     PlatosTable.setModel(model);
                 }
-                        
+
             }
-        }catch(UnknownHostException ex){
-           Logger.getLogger(UIMenu.class.getName()).log(Level.SEVERE, null, ex);
-        }  
+        } catch (UnknownHostException ex) {
+            Logger.getLogger(UIMenu.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_formWindowOpened
 
     /**
