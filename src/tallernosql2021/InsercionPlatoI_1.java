@@ -122,7 +122,7 @@ public class InsercionPlatoI_1 extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setText("Ingrediente 1");
+        jLabel7.setText("Ingrediente");
 
         jLabel10.setText("Nombre");
 
@@ -199,7 +199,6 @@ public class InsercionPlatoI_1 extends javax.swing.JFrame {
                                             .addComponent(cantidadI1text, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(nombreI1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel7)
                                         .addGap(32, 32, 32)))
                                 .addGap(26, 26, 26))))))
@@ -314,7 +313,9 @@ public class InsercionPlatoI_1 extends javax.swing.JFrame {
                 ingredientes.clear();
                 nombretext.setText(null);
                 valorRealtext.setText(null);
+                JOptionPane.showMessageDialog(null, "se inserto el menú con exito!");
                 valorComercialtext.setText(null);
+                caloriastext.setText(null);
                 recetaText.setText(null);
             }
         } catch (UnknownHostException ex) {
@@ -324,6 +325,7 @@ public class InsercionPlatoI_1 extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         String nomI1 = nombreI1.getText();
         String cantidadI1 = cantidadI1text.getText();
@@ -333,7 +335,6 @@ public class InsercionPlatoI_1 extends javax.swing.JFrame {
         Ingrediente obj1 = new Ingrediente(nomI1, cantidadT1D, medidaI1);
 
         ingredientes.add(obj1);
-        System.out.println(ingredientes);
 
         nombreI1.setText(null);
         cantidadI1text.setText(null);
