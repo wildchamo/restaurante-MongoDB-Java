@@ -12,6 +12,7 @@ import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
+import static com.mongodb.client.model.Filters.lt;
 import java.net.UnknownHostException;
 import java.util.LinkedList;
 
@@ -54,4 +55,20 @@ public class BaseDatos {
         }
         return r;
     }
+    
+        public LinkedList<? extends BasicDBObject> findMenorQue(Class<? extends BasicDBObject> clase, double valor ) throws UnknownHostException {
+        LinkedList<BasicDBObject> r = new LinkedList<BasicDBObject>();
+
+        if (createConnection() != null) {
+            DBCollection collection = db.getCollection(clase.getSimpleName());
+            collection.setObjectClass(clase);
+            DBCursor cursor = collection.find(lt("valor_real", valor));
+            while (cursor.hasNext()) {
+                DBObject objectAux = cursor.next();
+                r.add((BasicDBObject) objectAux);
+            }
+        }
+        return r;
+    }
+    
 }
