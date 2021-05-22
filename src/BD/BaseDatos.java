@@ -82,6 +82,18 @@ public class BaseDatos {
         }
         return r;
     }
+        public LinkedList<? extends BasicDBObject> findValorIgual(Class<? extends BasicDBObject> aClass, String atribute, Number valor) {
+        LinkedList<BasicDBObject> r = new LinkedList<BasicDBObject>();
+        BasicDBObject query = new BasicDBObject(atribute, new BasicDBObject("$eq", valor));
+        DBCollection collection = db.getCollection(aClass.getSimpleName());
+        collection.setObjectClass(aClass);
+        DBCursor cursor = collection.find(query);
+        while (cursor.hasNext()) {
+            DBObject objectAux = cursor.next();
+            r.add((BasicDBObject) objectAux);
+        }
+        return r;
+    }
 
 
 
