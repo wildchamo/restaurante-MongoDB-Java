@@ -6,3 +6,5 @@ Permite agregar menús con un chef. Agregar diferentes platos y tiene un filtro 
 
 <b>Esquema utilizado para la creación de la base de datos documental:<b>
 
+![screenshot](/img/modelo.png)
+
