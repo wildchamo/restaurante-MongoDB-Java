@@ -44,7 +44,7 @@ public class PlatoIngrediente {
 //jcombobox 
 //agregar el get del _id
 
-                listaP = (LinkedList<Plato>)objbd.findAll(objpp.getClass());
+                listaP = (LinkedList<Plato>)objbd.findEntre(objpp.getClass(),"valor_real",299,400);
                 
                 for(int i=0; i<listaP.size();i++){
                     Plato get = listaP.get(i);

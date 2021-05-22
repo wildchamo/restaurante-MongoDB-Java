@@ -55,20 +55,31 @@ public class BaseDatos {
         }
         return r;
     }
-    
-        public LinkedList<? extends BasicDBObject> findMenorQue(Class<? extends BasicDBObject> clase, double valor ) throws UnknownHostException {
-        LinkedList<BasicDBObject> r = new LinkedList<BasicDBObject>();
 
-        if (createConnection() != null) {
-            DBCollection collection = db.getCollection(clase.getSimpleName());
-            collection.setObjectClass(clase);
-            DBCursor cursor = collection.find(lt("valor_real", valor));
-            while (cursor.hasNext()) {
-                DBObject objectAux = cursor.next();
-                r.add((BasicDBObject) objectAux);
-            }
+    public LinkedList<? extends BasicDBObject> findEntre(Class<? extends BasicDBObject> aClass, String atribute, Number min, Number max) {
+        LinkedList<BasicDBObject> r = new LinkedList<BasicDBObject>();
+        BasicDBObject query = new BasicDBObject(atribute, new BasicDBObject("$gt", min).append("$lte", max));
+        DBCollection collection = db.getCollection(aClass.getSimpleName());
+        collection.setObjectClass(aClass);
+        DBCursor cursor = collection.find(query);
+        while (cursor.hasNext()) {
+            DBObject objectAux = cursor.next();
+            r.add((BasicDBObject) objectAux);
         }
         return r;
     }
-    
+
+    public LinkedList<? extends BasicDBObject> find(Class<? extends BasicDBObject> aClass, String atribute, Object data) {
+        LinkedList<BasicDBObject> r = new LinkedList<BasicDBObject>();
+        BasicDBObject query = new BasicDBObject(atribute, data);
+        DBCollection collection = db.getCollection(aClass.getSimpleName());
+        collection.setObjectClass(aClass);
+        DBCursor cursor = collection.find(query);
+        while (cursor.hasNext()) {
+            DBObject objectAux = cursor.next();
+            r.add((BasicDBObject) objectAux);
+        }
+        return r;
+    }
+
 }
