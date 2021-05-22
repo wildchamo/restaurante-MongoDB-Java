@@ -33,7 +33,7 @@ public class BaseDatos {
 
         //String mongoCloudURI = data.getMongoURI();
         //   String mongoCloudURI = data.getMongoURILocal();
-        MongoClientURI uri = new MongoClientURI("mongodb+srv://joseLuisB:l3128170868@cluster0.s3yuf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+        MongoClientURI uri = new MongoClientURI("mongodb+srv://joseLuisB:Autonoma22@cluster0.s3yuf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
         //mongodb+srv://pruebaadmin:<password>@cluster0-tlwaa.mongodb.net/test?retryWrites=true&w=majority
         System.out.println("cadena " + uri.toString());
         client = new MongoClient(uri);
