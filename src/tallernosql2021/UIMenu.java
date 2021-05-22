@@ -408,6 +408,27 @@ public class UIMenu extends javax.swing.JFrame {
         double minimoF= Double.parseDouble(minimo);
         String maximo = minbox.getText();
         double maximoF= Double.parseDouble(maximo);
+        
+        
+        BaseDatos objbd = new BaseDatos();
+        Plato objpp=new Plato();
+        LinkedList<Plato> listaP;
+        
+         try {
+            DB objb = objbd.createConnection();
+            if (objb != null) {
+                   listaP = (LinkedList<Plato>)objbd.findEntre(objpp.getClass(),"valor_real",299,400);
+                
+                for(int i=0; i<listaP.size();i++){
+                    Plato get = listaP.get(i);
+                    System.out.println("datos " + get.toJson()+"\n");
+                }
+            }
+          } catch (UnknownHostException ex) {
+            Logger.getLogger(TallerNoSQL2021.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
