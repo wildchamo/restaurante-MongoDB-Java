@@ -498,6 +498,7 @@ public class UIMenu extends javax.swing.JFrame {
                 listaP = (LinkedList<Plato>) objBd.findEntre(tempP.getClass(), nombrePropiedad, minimoF, maximoF);
 
                 DefaultTableModel model = (DefaultTableModel) PlatosTable.getModel();
+                model.setRowCount(0);
                 for (Plato plato : listaP) {
                     model.addRow(new Object[]{plato.getNombreP(), false});
                     PlatosTable.setModel(model);
@@ -514,29 +515,29 @@ public class UIMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_minboxActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        try {
-            DB objB = objBd.createConnection();
+//        
 
-            if (objB != null) {
-                Plato tempP = new Plato();
-                listaP = (LinkedList<Plato>) objBd.findAll(tempP.getClass());
-                // listaP = (LinkedList<Plato>) objBd.findEntre(tempP.getClass(), "valor_real", 299, 400);
+//        for (int i=0;i<= model.getRowCount();i++) {
+//                    model.removeRow(i);
+//                    }
+                try {
+                    DB objB = objBd.createConnection();
 
-                DefaultTableModel model = (DefaultTableModel) PlatosTable.getModel();
-                for (int i=0;i< listaP.size();i++) {
-                    model.removeRow(i);
+                    if (objB != null) {
+                        Plato tempP = new Plato();
+                        listaP = (LinkedList<Plato>) objBd.findAll(tempP.getClass());
+
+                        DefaultTableModel model = (DefaultTableModel) PlatosTable.getModel();
+                        model.setRowCount(0);
+                        for (Plato plato : listaP) {
+                            model.addRow(new Object[]{plato.getNombreP(), false});
+                            PlatosTable.setModel(model);
+                        }
+
                     }
-                
-
-                for (Plato plato : listaP) {
-                    model.addRow(new Object[]{plato.getNombreP(), false});
-                    PlatosTable.setModel(model);
+                } catch (UnknownHostException ex) {
+                    Logger.getLogger(UIMenu.class.getName()).log(Level.SEVERE, null, ex);
                 }
-
-            }
-        } catch (UnknownHostException ex) {
-            Logger.getLogger(UIMenu.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
