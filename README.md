@@ -13,7 +13,7 @@ Permite agregar menús con un chef. Agregar diferentes platos y tiene un filtro 
   ![screenshot](/img/menu.png)
   ![screenshot](/img/platos.png)
   
-<b>Experiencia <b> 
+<b>Experiencia
  <br>
  Fue muy gratificante usar mongoDB por primera vez. Espero usarlo en proximos proyectos. Es muy poderoso!
   
