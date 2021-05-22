@@ -55,6 +55,7 @@ public class UIMenu extends javax.swing.JFrame {
         maxbox = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jTextField3 = new javax.swing.JTextField();
         cmbVigente = new javax.swing.JComboBox<>();
@@ -74,6 +75,7 @@ public class UIMenu extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -154,12 +156,16 @@ public class UIMenu extends javax.swing.JFrame {
 
         jLabel11.setText("minimo");
 
+        jLabel13.setText("Filtrar con valor minimo y maximo");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel13)
+                .addGap(33, 33, 33)
                 .addComponent(filtroEleccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel11)
@@ -183,7 +189,8 @@ public class UIMenu extends javax.swing.JFrame {
                     .addComponent(maxbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11)
                     .addComponent(jLabel12)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -319,6 +326,9 @@ public class UIMenu extends javax.swing.JFrame {
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel14.setText("Filtros");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -327,16 +337,19 @@ public class UIMenu extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(229, 229, 229)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 227, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(35, 35, 35)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(36, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel14)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -347,9 +360,11 @@ public class UIMenu extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19)
+                .addComponent(jLabel14)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -429,8 +444,8 @@ public class UIMenu extends javax.swing.JFrame {
 
             if (objB != null) {
                 Plato tempP = new Plato();
-              listaP = (LinkedList<Plato>) objBd.findAll(tempP.getClass());
-              // listaP = (LinkedList<Plato>) objBd.findEntre(tempP.getClass(), "valor_real", 299, 400);
+                listaP = (LinkedList<Plato>) objBd.findAll(tempP.getClass());
+                // listaP = (LinkedList<Plato>) objBd.findEntre(tempP.getClass(), "valor_real", 299, 400);
 
                 DefaultTableModel model = (DefaultTableModel) PlatosTable.getModel();
 
@@ -451,23 +466,22 @@ public class UIMenu extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
-        String nombrePropiedad = filtroEleccion.getSelectedItem().toString();
-//        String minimo = minbox.getText();
-//        Number minimoF = Double.parseDouble(minimo);
-//        String maximo = minbox.getText();
-//        Number maximoF = Double.parseDouble(maximo);
-
-
         try {
             DB objB = objBd.createConnection();
 
+            String nombrePropiedad = filtroEleccion.getSelectedItem().toString();
+            String minimo = minbox.getText();
+            double minimoF = Double.parseDouble(minimo);
+            String maximo = minbox.getText();
+            double maximoF = Double.parseDouble(maximo);
+
             if (objB != null) {
                 Plato tempP = new Plato();
-                listaP = (LinkedList<Plato>) objBd.findEntre(tempP.getClass(), nombrePropiedad, 10,20);
+
+//              listaP = (LinkedList<Plato>) objBd.findAll(tempP.getClass());
+                listaP = (LinkedList<Plato>) objBd.findEntre(tempP.getClass(), nombrePropiedad, minimoF, maximoF);
 
                 DefaultTableModel model = (DefaultTableModel) PlatosTable.getModel();
-                minbox.setText(null);
-                maxbox.setText(null);
 
                 for (Plato plato : listaP) {
                     model.addRow(new Object[]{plato.getNombreP(), false});
@@ -478,8 +492,6 @@ public class UIMenu extends javax.swing.JFrame {
         } catch (UnknownHostException ex) {
             Logger.getLogger(UIMenu.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void minboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minboxActionPerformed
@@ -532,6 +544,8 @@ public class UIMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
