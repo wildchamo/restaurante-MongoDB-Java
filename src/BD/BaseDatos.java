@@ -68,10 +68,11 @@ public class BaseDatos {
         }
         return r;
     }
+    
 
-    public LinkedList<? extends BasicDBObject> find(Class<? extends BasicDBObject> aClass, String atribute, Object data) {
+    public LinkedList<? extends BasicDBObject> findNombreIgual(Class<? extends BasicDBObject> aClass, String atribute, String nombre) {
         LinkedList<BasicDBObject> r = new LinkedList<BasicDBObject>();
-        BasicDBObject query = new BasicDBObject(atribute, data);
+        BasicDBObject query = new BasicDBObject(atribute, new BasicDBObject("$eq", nombre));
         DBCollection collection = db.getCollection(aClass.getSimpleName());
         collection.setObjectClass(aClass);
         DBCursor cursor = collection.find(query);
@@ -81,5 +82,7 @@ public class BaseDatos {
         }
         return r;
     }
+
+
 
 }
